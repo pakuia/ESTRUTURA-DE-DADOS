@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-int numero[3];
+int numero[11];
 int posicao;
 
 void Exibe()
 {
- for (posicao=0;posicao <3;posicao++)
+ for (posicao=0;posicao <11;posicao++)
  {
-  printf("Na posicao %i ", posicao);
+  printf("Na posicao %i:", posicao+1);
   printf(" esta o numero: %i \n", numero[posicao]);
 
  }    
@@ -23,7 +23,7 @@ void Ordena()
    do
    {
      valida=false;
-     for (posicao=0; posicao <2;posicao++)
+     for (posicao=0; posicao <10;posicao++)
      {
          if (numero[posicao]>numero[posicao+1])
          {
@@ -35,15 +35,15 @@ void Ordena()
          }
      }    
    }while (valida == true);
- printf("\n Qtd de trocas %i", qtdTrocas);    
+ printf("\n Qtd de trocas: %i", qtdTrocas);    
      
 }
 
 int main() 
 {
- for (posicao=0;posicao <3;posicao++)
+ for (posicao=0;posicao <11;posicao++)
  {
-  printf("\nInforme o numero da posicao %i ", posicao );
+  printf("\nInforme o numero da posicao %i: ", posicao+1);
   scanf("%i",&numero[posicao]);   
  }    
  
